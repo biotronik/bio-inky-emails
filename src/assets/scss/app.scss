@@ -1,0 +1,26 @@
+@import 'settings';
+@import 'foundation-emails';
+@import 'button-notes';
+
+@import 'template/template';
+
+
+/* Small only */
+@media only screen and (max-width: #{$global-breakpoint}) {
+	.top-gutter {
+		display: none;
+	}
+}
+
+p{
+	color:#333333;
+}
+
+.logo{
+	width: 250px;
+}
+
+.footer{
+	color:#a3afc8;
+	font-size: 12px;
+}
