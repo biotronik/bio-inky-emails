@@ -1,89 +1,96 @@
----
-layout: index-layout
-subject: BIOhub Email Template
----
-
-<spacer size="16" class="top-gutter"></spacer>
+<spacer size="16"></spacer>
 
 <container>
+<row>
+  <columns>
+    <spacer size="16"></spacer>
+    <center><img style="width: 250px" src="https://biotronikus.box.com/shared/static/v1jypj0wnlh17q3kaa75qy65z9gzfk5g.png" alt="bio-logo"></center>
+  </columns>
+</row>
+  <spacer size="50"></spacer>
 
-  <spacer size="24"></spacer>
-  
-  <!-- Start Company Logo section -->
-    <row>
-      <columns>
-          <img style="width: 100px;" class="float-left" src="https://biotronikus.box.com/shared/static/pef4jl14fu2oo1ruv5o7ys78v1af7isg.png" alt="Biotronik Logo">
-      </columns>
-    </row>
-  <!-- end Company Logo section -->
-
-  <spacer size="24"></spacer>
-
-  <!-- Start Description / message section -->
+  <!-- Description Content -->
   <row>
-    <columns small="12">
-      <p style="color: #484848; line-height: 1.5;">[[typed_message]]</p>
-
-      <spacer size="16"></spacer>
+    <columns>
+      <p class="text-left">[[typed_message]]</p>
+    </columns>
+  </row>
+  <!-- End of Description Content -->
+  
+  <!-- Signature -->
+  <row>
+    <columns>
+      <p class="text-left">[[actor_signature]]</p>
+    </columns>
+  </row>
+  <!-- End of Signature -->
 
   <!-- Start Files section -->
   <!-- start conditional, Whether there are items available shows next block of code-->
-        <if_filesshared>
-          <row>
-              <columns style="padding-bottom:0px!important;">
-                  <spacer size="15"></spacer>
-                  <small class="custom-title">Files shared:</small>
-              </columns>
-          </row>
-          <!-- Start File list foreach, it allows to process each item in the collection -->
-              <foreach_file>
-                  <spacer size="3"></spacer>
-                  <row>
-                    <columns class="file-list-vertical" style="padding: 0;">
-                        <row class="collapse">
-
-                          <columns small="2" large="1">
-                            <table  height="40" width="40" class="file-list-icon">
-                              <tr>
-                                <td style="overflow: hidden !important; max-width: 50px; background-color: [[file_colour]] ">
-                                  <p align="center">[[file_type]]</p>
-                                </td>
-                              </tr>
-                            </table>
-                          </columns>
-
-                          <columns class="file-list-link" small="7" large="9">
-                            <span class="small-text-left ">[[file_title]]</span>
-                          </columns>
-
-                        </row>
-                    </columns>
-                  </row>
-              </foreach_file>
-            <!-- end File list foreach -->
-          </if_filesshared>
-    <!-- end conditional -->
-
-    <spacer size="15"></spacer>
+  <if_filesshared>
 
       <row>
-        <columns small="12" large="6">
-          <center>
-            <button href="[[content_link]]" class="radius primary small-expanded large"><span>View Content</span></button>
-          </center>
-        </columns>
+          <columns style="padding-bottom:0px!important;">
+              <spacer size="15"></spacer>
+              <small class="custom-title">Files shared</small>
+          </columns>
       </row>
-    <!-- end Files section -->
+      <!-- Start File list foreach, it allows to process each item in the collection -->
+      <foreach_file>
+          <spacer size="3"></spacer>
+          <row>
+              <columns class="file-list-vertical  " style="padding: 0; ">
 
+                  <row class="collapse ">
+                      <columns small="2" large="1">
+
+                          <table  height="40" width="40" class="file-list-icon" style="background-color: [[file_colour]]">
+                              <tr style="background-color: [[file_colour]]">
+                                  <td style="overflow: hidden !important; max-width: 50px; background-color: [[file_colour]]">
+                                      <p align="center">[[file_type]]</p>
+                                  </td>
+                              </tr>
+                          </table>
+
+                      </columns>
+                      <columns class="file-list-link" small="7" large="9">
+                          <span class="small-text-left ">[[file_title]]</span>
+                      </columns>
+                  </row>
+
+              </columns>
+          </row>
+      </foreach_file>
+
+      <!-- end File list foreach -->
+  </if_filesshared>
+  <!-- end conditional -->
+
+
+  <spacer size="15"></spacer>
+  <row>
+      <columns>
+          <center>
+              <button href="[[content_link]]" class="radius small-expanded large"><span>View Content</span></button>
+          </center>
+      </columns>
+  </row>
+  <!-- end Files section -->
+
+  <!-- Footer Image -->
+  <row class="collapse">
+    <columns style="padding-bottom: 0px !important">
+      <img src="https://biotronikus.box.com/shared/static/voledw36webrk5ert6zwzjk3me8dw3xr.jpg" alt="bio-footer">
     </columns>
   </row>
+  <!-- End of Footer Image -->
+
 </container>
 
 <spacer size="16"></spacer>
 
 <center>
-  <small>BIOTRONIK, Inc.<br>6024 Jean Rd<br>Lake Oswego, Oregon<br>97035 USA</small>
+  <small>BIOTRONIK</small>
 </center>
 
 <spacer size="16"></spacer>
-<span class="hidden-footer">DO NOT REMOVE: EMAIL ID: 26  CODE: shared_content_external </span>

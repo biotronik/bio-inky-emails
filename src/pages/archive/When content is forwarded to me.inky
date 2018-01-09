@@ -1,0 +1,181 @@
+<center>
+    <container>
+
+        <!-- Start Company Logo section -->
+        <spacer size="20"></spacer>
+        <row>
+            <columns small="12" large="12">
+                <center>
+                    <img class="companyLogo" style="width:140px height:40px"  width="140" height="40" src="[[company_logo]]" alt="[[company_name]]">
+                </center>
+            </columns>
+        </row>
+        <!-- end Company Logo section -->
+
+        <!-- Start Greetings section -->
+        <row>
+            <columns small="12" large="12">
+                <h4 style="Margin-bottom: 5px!important;"><center>Hi [[recipient_first_name]],</center></h4>
+
+                <h5 style="margin-bottom:0!important;"><center>[[actor_first_name]] forwarded content to you</center></h5>
+
+            </columns>
+        </row>
+        <spacer size="25"></spacer>
+        <!-- end Greetings section -->
+
+        <!-- Start Description / message section -->
+
+        <row>
+            <columns small=12 large=12 class="th-full-width">
+                <p >
+                <center class="description-center">
+
+                    [[typed_message]]
+                </center>
+                </p>
+            </columns>
+        </row>
+        <!-- end Description / message section -->
+
+        <!-- Start Story item section -->
+        <!-- start conditional, Whether there are items available shows next block of code-->
+        <if_storyshared>
+
+            <row>
+                <columns small=12 large=12 class="large-offset-0">
+
+                    <spacer size="5"></spacer>
+
+                    <row class="collapse">
+                        <columns small="2" large="1" class="feature-img-column">
+                            <img class="story-featured-img" height="50" width="50" src="[[story_thumbnail]]" alt="[[story_title]]">
+                        </columns>
+                        <columns class="story-column" small="8" large="9">
+                            <p class="small-text-left custom-p custom-p-50"><span>[[story_title]]</span></p>
+                            <p class="small-text-left subheader">[[author_first_name]] [[author_last_name]]</p>
+                        </columns>
+                    </row>
+
+
+                </columns>
+            </row>
+        </if_storyshared>
+
+        <!-- end conditional -->
+        <!-- end Story item section -->
+
+
+        <!-- Start Files section -->
+        <!-- start conditional, Whether there are items available shows next block of code-->
+        <if_filesshared>
+
+            <row>
+                <columns style="padding-bottom:0px!important;">
+                    <spacer size="15"></spacer>
+                    <small class="custom-title">Files shared</small>
+                </columns>
+            </row>
+            <!-- Start File list foreach, it allows to process each item in the collection -->
+            <foreach_file>
+                <spacer size="3"></spacer>
+                <row>
+                    <columns class="file-list-vertical  " style="padding: 0; ">
+
+                        <row class="collapse ">
+                            <columns small="2" large="1">
+
+                                <table  height="40" width="40" class="file-list-icon">
+                                    <tr>
+                                        <td style="overflow: hidden !important; max-width: 50px; background-color: [[file_colour]] ">
+                                            <p align="center">[[file_type]]</p>
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+                            </columns>
+                            <columns class="file-list-link " small="7" large="9">
+                                <span class="small-text-left ">[[file_title]]</span>
+
+                            </columns>
+                        </row>
+
+                    </columns>
+                </row>
+            </foreach_file>
+
+            <!-- end File list foreach -->
+        </if_filesshared>
+        <!-- end conditional -->
+
+
+        <spacer size="15"></spacer>
+        <row>
+            <columns small="12" large="6">
+                <center>
+                    <button href="[[content_link]]" class="radius large custom-large-button"><span>View Content</span></button>
+                </center>
+            </columns>
+        </row>
+        <!-- end Files section -->
+
+        <spacer size="5"></spacer>
+
+
+
+        <!-- Start User Profile Section -->
+        <row>
+            <columns style="padding-bottom: 0px;">
+                <spacer size="5"></spacer>
+                <small>Originally shared by</small>
+            </columns>
+        </row>
+        <row>
+            <columns small=12 large=12 class="large-offset-0" style="padding: 0;">
+
+                <row class="collapse " style="padding-bottom:0px;">
+                    <columns small="2" large="1" class="large-offset-1" style="min-width:40px; max-width:40px;">
+                        <img class="circle-20 image-center user-avatar" height="40" width="40" src="[[original_share_user_thumbnail]]" alt="[[original_share_user_first_name]] [[original_share_user_last_name]]">
+                    </columns>
+                    <columns class="user-column" small="8" large="9" >
+                        <p class="small-text-left custom-p" style="margin-top:1px;">[[original_share_user_first_name]] [[original_share_user_last_name]]</p>
+                        <p class="small-text-left subheader">[[original_share_date]]</p>
+                    </columns>
+                </row>
+
+            </columns>
+        </row>
+        <!-- end User Profile Section -->
+
+        <spacer size="20"></spacer>
+
+        <!-- Start Footer section -->
+        <spacer size="15"></spacer>
+        <hr style="margin-bottom:15px;">
+
+        <row>
+            <columns>
+                <center >
+                    <img class="small-text-center" style="width:90px; max-width:90px; height:25px" height="25" width="90" src="[[company_logo]]" alt="">
+                </center>
+            </columns>
+        </row>
+
+        <row>
+            <columns class="footer-foot">
+                <center><small>Powered by Bigtincan</small></center>
+
+
+                <center class="small-text-center">
+                    <small>Sent by [[company_name]]. [[company_address]]</small>
+                </center>
+            </columns>
+        </row>
+
+
+        <!-- end Footer section -->
+
+    </container>
+</center>
+<span class="hidden-footer">DO NOT REMOVE: EMAIL ID: 44  CODE: shared_content_forwarded_internal </span>

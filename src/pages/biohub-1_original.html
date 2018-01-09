@@ -1,0 +1,89 @@
+---
+layout: index-layout
+subject: BIOhub Email Template
+---
+
+<spacer size="16" class="top-gutter"></spacer>
+
+<container>
+
+  <spacer size="24"></spacer>
+  
+  <!-- Start Company Logo section -->
+    <row>
+      <columns>
+          <img style="width: 100px;" class="float-left" src="https://biotronikus.box.com/shared/static/pef4jl14fu2oo1ruv5o7ys78v1af7isg.png" alt="Biotronik Logo">
+      </columns>
+    </row>
+  <!-- end Company Logo section -->
+
+  <spacer size="24"></spacer>
+
+  <!-- Start Description / message section -->
+  <row>
+    <columns small="12">
+      <p style="color: #484848; line-height: 1.5;">[[typed_message]]</p>
+
+      <spacer size="16"></spacer>
+
+  <!-- Start Files section -->
+  <!-- start conditional, Whether there are items available shows next block of code-->
+        <if_filesshared>
+          <row>
+              <columns style="padding-bottom:0px!important;">
+                  <spacer size="15"></spacer>
+                  <small class="custom-title">Files shared:</small>
+              </columns>
+          </row>
+          <!-- Start File list foreach, it allows to process each item in the collection -->
+              <foreach_file>
+                  <spacer size="3"></spacer>
+                  <row>
+                    <columns class="file-list-vertical" style="padding: 0;">
+                        <row class="collapse">
+
+                          <columns small="2" large="1">
+                            <table  height="40" width="40" class="file-list-icon">
+                              <tr>
+                                <td style="overflow: hidden !important; max-width: 50px; background-color: [[file_colour]] ">
+                                  <p align="center">[[file_type]]</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </columns>
+
+                          <columns class="file-list-link" small="7" large="9">
+                            <span class="small-text-left ">[[file_title]]</span>
+                          </columns>
+
+                        </row>
+                    </columns>
+                  </row>
+              </foreach_file>
+            <!-- end File list foreach -->
+          </if_filesshared>
+    <!-- end conditional -->
+
+    <spacer size="15"></spacer>
+
+      <row>
+        <columns small="12" large="6">
+          <center>
+            <button href="[[content_link]]" class="radius primary small-expanded large"><span>View Content</span></button>
+          </center>
+        </columns>
+      </row>
+    <!-- end Files section -->
+
+    </columns>
+  </row>
+</container>
+
+<spacer size="16"></spacer>
+
+<center>
+  <small>BIOTRONIK, Inc.<br>6024 Jean Rd<br>Lake Oswego, Oregon<br>97035 USA</small>
+</center>
+
+<spacer size="16"></spacer>
+<span class="hidden-footer">DO NOT REMOVE: EMAIL ID: 26  CODE: shared_content_external </span>
