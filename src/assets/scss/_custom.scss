@@ -30,6 +30,9 @@ $light-blue: #a3afc8;
 .footer {
 	color: $light-blue;
 	font-size: 12px;
+	a {
+		color: $light-blue;
+	}
 }
 
 .text-signature {
@@ -48,3 +51,4 @@ $light-blue: #a3afc8;
 .aps {
 	background: #f3f3f3 !important;
 }
+
